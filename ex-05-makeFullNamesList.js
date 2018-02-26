@@ -8,6 +8,38 @@
  *
 **/
 
+console.log("========= Exercise 05 =========")
+
+// recibir un array de objetos 
+// retornar un arreglo de strings donde cada string es:
+//		titulo + nombre + apellido
+
+// const arrayQMeDan = [
+// 	{ first: 'Ruby', last: 'Scooby', gender: 'female'},
+// 	{ first: 'Jen', last: 'Vin', gender: 'female'},
+// 	{ first: 'Dan', last: 'Theman', gender: 'male'},
+// ]
+
+function getFullNames(arrayDeObjetos) {
+	stringNombres = []
+	
+	for (let i = 0 ; i < arrayDeObjetos.length ; i++ ) {
+		let genderTitulo = ""
+		if (arrayDeObjetos[i].gender === "female") {
+			genderTitulo = "Ms."
+		} 
+		else genderTitulo = "Mr."
+		stringNombres.push(
+			genderTitulo + " " 
+			+ arrayDeObjetos[i].first + " " 
+			+ arrayDeObjetos[i].last
+		)
+	}
+		return stringNombres
+}
+// const printEx05 = getFullNamesList(arrayQMeDan)
+// console.log(printEx05)
+
 
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
@@ -33,5 +65,5 @@ console.assert(fullNamesList1[1] === "Ms. Kate Smith")
 //-------------------------------
 var moreNamesList = getFullNames(moreCustomersList)
 console.assert(typeof moreNamesList[1] === "string")
-console.assert(moreNamesList[1] === "Ms. Ruby Scooby")
+console.assert(moreNamesList[0] === "Ms. Ruby Scooby")
 console.assert(moreNamesList[2] === "Mr. Dan Theman")

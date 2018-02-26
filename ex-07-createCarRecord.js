@@ -18,10 +18,31 @@
  *  ( see GROUP2 - GROUP4 console.assert() )
 **/
 
+console.log("======== Exercise 007 ==========")
 
-
-
-
+function createCarRecord(w, x, y, z) {
+	if (w === undefined || x === undefined || y ===  undefined || z === undefined) {
+		return "new record must have make, model, year, and license values"
+	} else if (typeof y !== "number") {
+		return "3rd argument must be a Number"
+	} else if (typeof w !== "string" 
+		|| typeof x!== "string" 
+		|| typeof z !== "string") {
+		return "1st, 2nd, and 4th arguments must be String"
+	} else if (typeof w === "string" 
+		&& typeof x === "string" 
+		&& typeof y === "number"
+		&& typeof z === "string") {
+			objetoCardRecord = {}
+			objetoCardRecord.make = w
+			objetoCardRecord.model = x
+			objetoCardRecord.year = y
+			objetoCardRecord.license = z
+			return objetoCardRecord
+	}
+}
+const printEx07 = createCarRecord('Ford', 'Pinto', 1969, 'IOU7S2') 
+console.log(printEx07)
 
 
 
@@ -61,3 +82,5 @@ console.assert( newCar7 === '1st, 2nd, and 4th arguments must be String')
 //GROUP4
 console.assert( typeof newCar8 === 'string')
 console.assert( newCar8 === '3rd argument must be a Number')
+
+

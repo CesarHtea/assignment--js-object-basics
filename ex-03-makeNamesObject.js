@@ -19,10 +19,28 @@
  *
 */
 
+console.log("========= ejercicio 3 ============")
 
+// entran 3 strings
+// se retorna un objeto con 3 propiedades
 
+function makeNamesObject(gente1, gente2, gente3) {
+	const nuevoObjeto = {}
 
+	let nombreSeparado1 = gente1.split(" ")
+	nuevoObjeto[nombreSeparado1[0]] = nombreSeparado1[1]
 
+	let nombreSeparado2 = gente2.split(" ")
+	nuevoObjeto[nombreSeparado2[0]] = nombreSeparado2[1]
+	
+	let nombreSeparado3 = gente3.split(" ")
+	nuevoObjeto[nombreSeparado3[0]] = nombreSeparado3[1]
+	
+	return nuevoObjeto
+
+}
+const printEx03 = makeNamesObject("Rosa Parks", "Amelia Earhart", "Charlotte Webb")
+console.log(printEx03)
 
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~

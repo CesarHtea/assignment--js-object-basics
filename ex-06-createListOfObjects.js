@@ -12,7 +12,7 @@
  * createListOfObjects(namesList)
  *  =>
  *  [
- *     { firstName: 'Camer', lastName: 'Betts'},
+ *     { firstName: 'Cameron', lastName: 'Betts'},
  *     { firstName: 'Shana', lastName: 'Lopez'},
  *     { firstName: 'Angela', lastName: 'Li'}
  *  ]
@@ -20,6 +20,33 @@
  * HINT: You might be able to reuse some of the logic from createNameObject()
 */
 
+console.log("=========== Exercise 06 ===========")
+
+// entra un array de strings ["","","",...,""] con "firstName lastName"
+// retorne array de objetos con propiedades "firstName" y "lastName"
+
+var realNinjas = [
+  'Chuck Norris',
+  'Jackie Chan',
+  'Lucy Liu',
+  'Billy Blanks',
+  'Michelle Yeoh',
+  'Jet Li'
+]
+
+function createListOfObjects(arrayDeStrings) {
+  let arrayDeObjetos = []
+
+  for (let i = 0 ; i < arrayDeStrings.length ; i++) {
+    let arrayTemporal = arrayDeStrings[i].split(" ")
+    arrayDeObjetos.push({}) 
+    arrayDeObjetos[i].firstName = arrayTemporal[0]
+    arrayDeObjetos[i].lastName = arrayTemporal[1]
+    }
+  return arrayDeObjetos 
+}
+const printEx06 = createListOfObjects(realNinjas)
+console.log(printEx06)
 
 
 
@@ -49,7 +76,7 @@ var ninjaListOfObjects = createListOfObjects(realNinjas)
 console.assert(typeof ninjaListOfObjects[0] === "object")
 console.assert(ninjaListOfObjects[0].firstName === "Chuck")
 console.assert(ninjaListOfObjects[0].lastName === "Norris")
-console.assert(ninjaListOfObjects[1].firstName === "Jacky")
+console.assert(ninjaListOfObjects[1].firstName === "Jackie")
 console.assert(ninjaListOfObjects[1].lastName === "Chan")
 console.assert(ninjaListOfObjects[3].firstName === "Billy")
 console.assert(ninjaListOfObjects[3].lastName === "Blanks")

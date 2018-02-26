@@ -7,8 +7,21 @@
  *
 **/
 
+console.log("========= Exercise 4 ==========")
 
+function createNameObject(stringQEntra) {
+	
+	const nuevoObjeto = {}
+	
+	let nuevoArray = stringQEntra.split(" ")  
+	
+	nuevoObjeto.firstName = nuevoArray[0]
+	nuevoObjeto.lastName = nuevoArray[1]
 
+	return nuevoObjeto
+}
+const printEx04 = createNameObject("Lupe Maria")
+console.log(printEx04) 
 
 
 
@@ -24,5 +37,5 @@ console.assert(nameObj2.firstName === 'Felipe')
 console.assert(nameObj2.lastName === 'Tortuga')
 
 var nameObj3 = createNameObject("Lupe Maria")
-console.assert(nameObj2.firstName === 'Lupe')
-console.assert(nameObj2.lastName === 'Maria')
+console.assert(nameObj3.firstName === 'Lupe')
+console.assert(nameObj3.lastName === 'Maria')

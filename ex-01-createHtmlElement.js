@@ -14,7 +14,23 @@
  *  => '<h1 class="grid small-section">Lorem ipsum dolor sit amet.</h1>'
 */
 
+console.log("========= Create HTML Element ============")
 
+// pasa un objeto (que ya me dan y tiene variables element, textContent, classNames)
+// toma los elementos del objeto y crea una string que es una etiqueta de HTML
+
+var exampleObj3 = {
+  element: 'span',
+  textContent: 'This is an important message.',
+  classNames: 'highlight text-important'
+}
+
+function createHtmlElement(objetoAConvertir) {
+	return '<' + objetoAConvertir.element + ' class="' + objetoAConvertir.classNames + '">' 
+	+ objetoAConvertir.textContent + '</' + objetoAConvertir.element + '>'
+}
+const printEx01 = createHtmlElement(exampleObj3)
+console.log(printEx01) 
 
 
 
@@ -45,4 +61,4 @@ var htmlString3 = createHtmlElement(exampleObj3)
 
 console.assert(htmlString1 === '<p class="featured-section">This is so freaking cool!</p>')
 console.assert(htmlString2 === '<h2 class="ui-card-title bg--inverse">Bill Brasky</h2>')
-console.assert(htmlString2 === '<span class="highlight text-important">This is an important message.</span>')
+console.assert(htmlString3 === '<span class="highlight text-important">This is an important message.</span>')

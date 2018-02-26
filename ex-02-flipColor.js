@@ -9,7 +9,28 @@
 */
 
 
+console.log("========= Flip Color of Title ============")
 
+// entra (pasa) un objeto
+// is la propiedad 'color' del objeto es blue, pasarlo a red, y viceversa
+
+// var tileObj = {
+//     width: "200px",
+//     height: "200px",
+//     color: "blue"
+// }
+
+function flipColor(objetoDelGame) {
+	if (objetoDelGame.color === "blue") {
+		objetoDelGame.color = "red"
+	} 
+	else if (objetoDelGame.color === "red") {
+		objetoDelGame.color = "blue"
+	}
+	console.log(objetoDelGame)
+	return objetoDelGame 
+}
+// console.log(flipColor(tileObj))
 
 
 
@@ -27,3 +48,10 @@ console.assert(tileObj2.color === "red")
 
 var tileObj3 = flipColor(tileObj2)
 console.assert(tileObj3.color === "blue")
+
+
+
+
+
+
+
